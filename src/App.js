@@ -4,7 +4,8 @@ import { ExpenseItem } from './components/expense-item';
 function App() {
   return (
     <div className="App">
-      <ExpenseItem />
+      <ExpenseItem title='Walmart' date={new Date()} amount={`$78000`} />
+      <ExpenseItem title='Pricesmart' date={new Date()} amount={`$40000`} />
     </div>
   );
 }
