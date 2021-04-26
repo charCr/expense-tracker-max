@@ -1,11 +1,10 @@
 import './App.css';
-import { ExpenseItem } from './components/expense-item';
+import {ExpenseList} from './components/expense-list/expense-list.component';
 
 function App() {
   return (
     <div className="App">
-      <ExpenseItem title='Walmart' date={new Date()} amount={`$78000`} />
-      <ExpenseItem title='Pricesmart' date={new Date()} amount={`$40000`} />
+      <ExpenseList/>
     </div>
   );
 }
