@@ -1,11 +1,26 @@
+import React, { useState } from 'react';
 import './App.css';
-import {ExpenseList} from './components/expense-list/expense-list.component';
-import {NewExpense} from './components/new-expense/new-expense.component';
+import { ExpenseList } from './components/expense-list/expense-list.component';
+import { NewExpense } from './components/new-expense/new-expense.component';
+
+const DUMMY_DATA = [
+  {
+    id: 'e4',
+    title: 'Walmart',
+    amount: 300,
+    date: new Date('2010-08-05'),
+  },
+];
 function App() {
+  const [myExpenses, setMyExpenses] = useState(DUMMY_DATA);
+  const addExpenseHandler = (expenseData) => {
+    setMyExpenses((prevState) => [expenseData, ...prevState]);
+  };
+
   return (
     <div className="App">
-      <NewExpense/>
-      <ExpenseList/>
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <ExpenseList items={myExpenses} />
     </div>
   );
 }
