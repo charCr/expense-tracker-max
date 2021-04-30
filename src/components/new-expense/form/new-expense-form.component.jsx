@@ -33,6 +33,7 @@ export const NewExpenseForm = (props) => {
     setDate('');
 
     props.onSaveExpenseData(expenseData);
+    props.onHideForm();
   };
 
   return (
@@ -58,9 +59,15 @@ export const NewExpenseForm = (props) => {
           {console.log(date)}
         </div>
       </div>
+      <div className="new-expense-button-container ">
       <div className="new-expense__actions">
         <button>Add Expense</button>
       </div>
+      <div className="new-expense__actions">
+        <button onClick={props.onHideForm}>Cancel</button>
+      </div>
+      </div>
+      
     </form>
   );
 };

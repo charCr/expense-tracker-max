@@ -15,6 +15,7 @@ function App() {
   const [myExpenses, setMyExpenses] = useState(DUMMY_DATA);
   const addExpenseHandler = (expenseData) => {
     setMyExpenses((prevState) => [expenseData, ...prevState]);
+    console.log(expenseData)
   };
 
   return (
