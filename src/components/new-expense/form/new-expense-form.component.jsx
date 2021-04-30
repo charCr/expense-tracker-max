@@ -15,7 +15,8 @@ export const NewExpenseForm = (props) => {
   };
 
   const dateChangeHandler = (event) => {
-    setDate(event.target.value);
+    const date = event.target.value.replace(/-/g, '/');
+    setDate(date);
     console.log(date);
   };
 

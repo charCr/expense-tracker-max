@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { ExpenseList } from './components/expense-list/expense-list.component';
+import { Expenses } from './components/expenses/expenses.component';
 import { NewExpense } from './components/new-expense/new-expense.component';
 
 const DUMMY_DATA = [
@@ -8,7 +8,7 @@ const DUMMY_DATA = [
     id: 'e4',
     title: 'Walmart',
     amount: 300,
-    date: new Date('2010-08-05'),
+    date: new Date('2021/08/05'),
   },
 ];
 function App() {
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <NewExpense onAddExpense={addExpenseHandler} />
-      <ExpenseList items={myExpenses} />
+      <Expenses items={myExpenses} />
     </div>
   );
 }

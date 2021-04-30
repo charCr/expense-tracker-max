@@ -5,6 +5,7 @@ export const ExpenseFilter = (props) => {
   const handleSelectedYear = (event) => {
     const selectedYear = event.target.value;
     props.onAddSelectedYear(selectedYear);
+    console.log(selectedYear);
   };
 
   return (
