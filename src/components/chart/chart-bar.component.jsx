@@ -5,8 +5,8 @@ export const ChartBar = props => {
 
     let barHeightClass = '0%';
     
-    if (props.max > 0) {
-        barHeightClass.match.round(props.value / props.maxValue) * 100 + '%';
+    if (props.maxValue > 0) {
+        barHeightClass = Math.round(props.value / props.maxValue) * 100 + '%';
     }
 
     return (

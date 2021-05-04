@@ -3,6 +3,7 @@ import './expenses.styles.css';
 import { Card } from '../../shared/components/card/card.component';
 import { ExpenseFilter } from '../expense-filter/expense-filter.component';
 import { ExpenseList } from '../expenses/expense-list/expense-list.component';
+import {ExpensesChart} from '../expense-chart/expenses-chart';
 
 export const Expenses = (props) => {
   const [expenseYear, setExpenseYear] = useState('2021');
@@ -17,6 +18,7 @@ export const Expenses = (props) => {
 
   return (
     <div>
+      <ExpensesChart expenses={arrayOfMatchingExpenses}/>
       <Card className="expenses">
         <ExpenseFilter
           selected={expenseYear}
